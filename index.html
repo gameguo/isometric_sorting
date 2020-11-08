@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <script src='src/isoColor.js'></script>
+    <script src='src/isoObject.js'></script>
+    <script src='src/isoCamera.js'></script>
+    <script src='src/isoPainter.js'></script>
+    <script src='src/isoSort.js'></script>
+    <script src='src/main.js'></script>
+</head>
+
+<body>
+    <canvas id='mainCanvas' width=700 height=200></canvas>
+    <script>
+        var mapData = [
+            new isoObject({ x: 1, y: 3, z: 0 }, { x: 2, y: 2, z: 2.5 }, isoColor.green),
+            new isoObject({ x: 2, y: 2, z: 0 }, { x: 1, y: 1, z: 1.5 }, isoColor.red),
+            new isoObject({ x: 3, y: 1, z: 0 }, { x: 1, y: 4, z: 1 }, isoColor.blue),
+            new isoObject({ x: 0.5, y: 5, z: 0 }, { x: 2, y: 1.5, z: 1 }, isoColor.orange),
+            new isoObject({ x: 3, y: 3, z: 1 }, { x: 1, y: 1, z: 2.25 }, isoColor.black),
+            new isoObject({ x: 2, y: 7, z: 0 }, { x: 1, y: 1, z: 1 }, isoColor.white),
+            new isoObject({ x: 5, y: 1.5, z: 0 }, { x: 2, y: 2, z: 1.5 }, isoColor.purple),
+        ];
+        main.make({
+            canvas: 'mainCanvas',
+            mapData: mapData,
+        });
+    </script>
+</body>
+
+</html>
